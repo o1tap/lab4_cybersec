@@ -8,10 +8,6 @@ dependencies = [
     "psycopg[binary]",
     "sqlmodel",
     "pydantic",
-]
-
-[dependency-groups]
-dev = [
     "ruff",
     "mypy",
 ]

@@ -37,7 +37,7 @@ class ServerBase(SQLModel):
     @field_validator("ip_address")
     @classmethod
     def validate_ip(cls, value: str) -> str:
-        """Перевіряє, чи відповідає введена IP-адреса формату IPv4 за допомогою Regex."""
+        """Перевіряє відповідність IP-адреси формату IPv4 через Regex."""
         if not re.match(IP_REGEX, value):
             raise ValueError("Некоректний формат IP-адреси! Очікується стандарт IPv4.")
         return value

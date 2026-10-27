@@ -1,0 +1,20 @@
+# Віртуальне середовище Python
+.venv/
+venv/
+env/
+
+# Кеш-файли Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Файли конфігурації IDE
+.vscode/
+.idea/
+
+# Файли середовища
+.env

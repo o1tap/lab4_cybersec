@@ -1,0 +1,12 @@
+services:
+  # Назва нашого сервісу бази даних
+  db:
+    image: postgres:18                # Офіційний образ PostgreSQL версії 18 з Docker Hub
+    container_name: lab4_postgres_v13 # Назва докер-контейнера
+    environment:
+      POSTGRES_USER: postgres         # Логін суперкористувача
+      POSTGRES_PASSWORD: postgres     # Пароль для підключення
+      POSTGRES_DB: security_db        # Назва бази даних для нашої лабораторної
+    ports:
+      - "5432:5432"                   # Прокидання порту: [Порт ПК]:[Порт у контейнері]
+    restart: always                   # Автоматичне перезапустити при збої

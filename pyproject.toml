@@ -1,13 +1,29 @@
-# Налаштування для лінтера Ruff
+[project]
+name = "lab4-cybersec"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "psycopg[binary]",
+    "sqlmodel",
+    "pydantic",
+]
+
+[dependency-groups]
+dev = [
+    "ruff",
+    "mypy",
+]
+
 [tool.ruff]
-line-length = 88         # Максимальна довжина рядка коду (стандарт PEP8)
-target-version = "py312" # Версія Python
+line-length = 88
+target-version = "py312"
 
 [tool.ruff.lint]
-select = ["E", "F", "I", "UP"] # Перевіряти помилки синтаксису, імпорти та стиль
+select = ["E", "F", "I", "UP"]
 
-# Налаштування для аналізатора типів Mypy
 [tool.mypy]
 python_version = "3.12"
-strict = true                   # Строгий режим перевірки типів
-ignore_missing_imports = true   # Ігнорувати відсутність типів у зовнішніх бібліотеках
+strict = true
+ignore_missing_imports = true
